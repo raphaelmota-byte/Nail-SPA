@@ -59,10 +59,14 @@
                  <div class="card-servico">
 
                      {% if servico.foto %}
-                         <img src="{{ servico.foto.url }}" alt="{{ servico.nome }}">
+                         <img 
+                            src="{% static 'agendamentos/img/servicos/'|add:servico.foto %}"
+                            alt="{{ servico.nome }}"
+                         >
+
                      {% endif %}
 
-                     <h3>{{ servico.nome }}</h2>
+                     <h3>{{ servico.nome }}</h3>
                      <p>{{servico.descricao}}</p>
                      <a class="btn-servico" href="#agendamento"> Marque agora </a>
                  </div>
