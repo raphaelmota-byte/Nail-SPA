@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="{% static 'agendamentos/css/style.css' %}">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <header class="navbar">
@@ -43,9 +44,57 @@
         </section>
 
         <section id="beneficios">
-            <br>
-            <br>
-            <h2>section beneficios</h2>
+            <div class="container_geral">
+
+                <div class="container_flex_titulos">
+                    <p>O PADRÃO NAIL SPA</p> 
+                    <h2>Cuidado que faz a diferença</h2>
+                </div>
+
+                <div class="grid_beneficios">
+
+                    <div class="card_beneficios imagem_beneficio servico_personalizado_url">
+
+                        <div class="icone_beneficio">
+                             <i data-lucide="crown"></i>
+                        </div>
+
+                        <h4>Atendimento Personalizado</h4>
+                        <p>Cada cliente recebe um cuidado exclusivo, respeitando seu estilo, preferências e necessidades.</p>
+                    </div>
+
+                    <div class="card_beneficios imagem_beneficio produtos_premium_url">
+
+                        <div class="icone_beneficio">
+                             <i data-lucide="gem"></i>
+                        </div>
+                        
+                        <h4>Produtos Premium</h4>
+                        <p>Produtos de alta qualidade e marcas selecionadas para garantir beleza, durabilidade e segurança.</p>
+                    </div>
+                    
+                    <div class="card_beneficios imagem_beneficio bioseguranca_rigorosa_url">
+                        
+                        <div class="icone_beneficio">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        
+                        <h4>Biossegurança Rigorosa</h4>
+                        <p>Instrumentos esterilizados e protocolos de higiene seguidos em cada atendimento.</p>
+                    </div>
+                    
+                    <div class="card_beneficios imagem_beneficio ambiente_sofisticado_url">
+                        
+                        <div class="icone_beneficio">
+                            <i data-lucide="star"></i>
+                        </div>
+                        
+                        <h4>Ambiente Sofisticado</h4>
+                        <p>Um espaço elegante, confortável e acolhedor para transformar cada visita em um momento único</p>
+                    </div>
+                </div>
+
+            </div>
         </section>
         
         <section id="servicos">
@@ -53,7 +102,7 @@
             <br>
             <h2 style="text-align: center">Nossos serviços</h2>
 
-            <div class="container_servicos" > 
+            <div class="container_geral" > 
                 <div class="cards-servicos-grid">
              {% for servico in servicos %}
                  <div class="card-servico">
@@ -150,6 +199,7 @@
         }
     });
 
+    lucide.createIcons();
 </script>
 </body>
 </html>

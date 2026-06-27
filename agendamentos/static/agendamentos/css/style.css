@@ -116,15 +116,134 @@ section {
 .menu_btn {
     display: none;
 }
+/* =====================
+BENEFICIOS
+===================== */
+.container_flex_titulos {
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    /* border: red solid 2px ; */
+  
+}
+.container_flex_titulos p{
+    transform: translateX(-10px);
+    margin-bottom: 0;
+}
+
+.container_flex_titulos h2{
+    margin-top: 4px;
+}
+
+.grid_beneficios{
+    display: grid ;
+    grid-template-columns: repeat(4 , 1fr); /*4 colunas */
+    gap:32px ;
+    margin: 8px 0 0 0;
+}
+
+.card_beneficios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 16px;
+
+    width: 240px;
+    height: 340px;
+    border-radius: 12px;
+    border: 1px solid #5F7D95;
+
+    
+}
+
+
+.card_beneficios p {
+    font-size: 1.0rem;
+    color: #222 ;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+.imagem_beneficio {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.imagem_beneficio::before {
+  content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.1)
+    );
+    z-index: 0;
+}
+
+.imagem_beneficio > * {
+    position: relative;
+    z-index: 1;
+}
+
+.servico_personalizado_url{
+    background-image: url("../img/beneficios/servico_personalizado.jpg");
+   
+}
+.produtos_premium_url{
+    background-image: url("../img/beneficios/produtos_premium.jfif");
+}
+.bioseguranca_rigorosa_url{
+    background-image: url("../img/beneficios/bioseguranca.png");
+}
+.ambiente_sofisticado_url{
+    background-image: url("../img/beneficios/ambiente_sofisticado.png");
+}
+
+.icone_beneficio{
+    line-height: 0;
+    width: 45px;
+    height: 45px;
+
+    
+    border-radius: 50%;
+    
+    background-color: #F8FAFC; /* azul bem clarinho */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0 auto 10px;
+}
+
+
+.icone_beneficio svg{
+    width: 30px;
+    height: 30px;
+    display: block;
+    stroke-width: 2;
+    overflow: visible;
+}
+
+
+
 
 
 /* =====================
 SERVIÇOS
 ===================== */
-.container_servicos {
+.container_geral {
     width: min(90%, 1200px);
     margin: 0 auto;
-    padding: 32px 24px;
+    padding: 32px 24px; 
+    /* border: solid 2px black ; */
+
 }
 
 .cards-servicos-grid {
