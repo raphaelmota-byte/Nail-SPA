@@ -47,7 +47,7 @@
             <div class="container_geral">
 
                 <div class= "container_flex_titulos" >
-                    <p>O PADRÃO NAIL SPA</p> 
+                    <p>O padrão NAIL SPA</p> 
                     <h2>Cuidado que faz a diferença</h2>
                 </div>
 
@@ -101,7 +101,7 @@
         <section id="servicos">
             <div class="container_geral" > 
                 <div class="container_flex_titulos">
-                    <p>NOSSOS SERVIÇOS</p>
+                    <p>Nossos serviços</p>
                     <h2>Feitos com amor e dedicação.</h2>
                 </div>
 
@@ -130,11 +130,34 @@
         </section>
 
         <section id="galeria">
-            <br>
-            <br>
-            <h2>Galeria</h2>
-            <h3>Conheça nossa galeria especial </h3>
+            <div class="container_geral_galeria">
+                <div class="container_flex_titulos_galeria">
+                    <h3>Galeria</h3>
+                    <h2><span>Conheça</span> nossas artes</h2>
+                    <p>Cada detalhe pensado para realçar sua beleza</p>
+                </div>
+
+                <div class="container_carrossel">
+
+                    <div class="track">
+                        {% for url , alt in dic_galeria_alt.items %}
+                            <div class="card_imagem_galeria">
+                            <img src= "{% static url %}" alt= {{alt}} >
+                            </div>
+                        {% endfor %}
+
+                        {% for url , alt in dic_galeria_alt.items %}
+                            <div class="card_imagem_galeria">
+                            <img src= "{% static url %}" alt= {{alt}} >
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+            
         </section>
+
     
     <section id='depoimentos'>
         <br>
