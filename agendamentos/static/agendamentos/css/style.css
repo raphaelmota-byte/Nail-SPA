@@ -19,7 +19,7 @@ html, body {
 /* =====================
    TIPOGRAFIA GLOBAL
 ===================== */
-h1, h2 {
+h1{
     font-family: "Cormorant Garamond", serif;
     font-weight: 500;
 }
@@ -30,8 +30,12 @@ h1 {
     font-weight: 600;
 }
 
-h2 {
-    font-size: 44px;
+
+h2{
+    font-size: 2.8rem;
+    font-family: Manrope;
+    margin: 8px 0 ;
+    font-weight: 500;
 }
 
 h3 {
@@ -124,6 +128,7 @@ BENEFICIOS
     display: flex ;
     flex-direction: column;
     align-items: center;
+    margin: 4px;
     /* border: red solid 2px ; */
   
 }
@@ -244,7 +249,7 @@ SERVIÇOS
     width: min(90%, 1200px);
     margin: 0 auto;
     padding: 32px 24px; 
-    /* border: solid 2px black ; */
+    /* border: solid 2px green ; */
 
 }
 
@@ -253,7 +258,7 @@ SERVIÇOS
     grid-template-columns: repeat(3, 300px);
     gap: 32px;
     justify-content: center;
-    margin-top: 4px;
+    margin-top: 16px;
 }
 
 .card-servico {
@@ -312,6 +317,13 @@ SERVIÇOS
     background-color: #0f2f5f;
     transform: translateY(-2px);
 }
+
+.container_geral h3{
+    font-family: Manrope;
+    letter-spacing: 1.8px;
+    margin-bottom: 0;
+}
+
 /* =====================
 GALERIA
 ===================== */
@@ -322,13 +334,13 @@ GALERIA
     padding: 32px 24px; 
     /* border: solid 2px black ; */
 
+
 }
 
 .container_flex_titulos_galeria {
     display: flex ;
     flex-direction: column;
     align-items: center;
-    /* border: red solid 2px ; */
   
 }
 .container_flex_titulos_galeria h3{
@@ -351,7 +363,7 @@ h2 span {
     width: 100%;
     padding: 2px ;
     overflow: hidden;
-    /* border: green solid 2px */
+    margin-top: 4px;
 }
 
 
@@ -360,7 +372,6 @@ h2 span {
     padding: 12px ;
     flex-wrap: nowrap;
 
-    /* border: red solid 2px ; */
 
     animation: scroll 40s linear infinite;
     width: max-content;
@@ -372,7 +383,11 @@ h2 span {
     height: 320px;
     margin-right: 18px;
     overflow: hidden ;
-    /* border: green solid 2px */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card_imagem_galeria:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,.12);
 }
 
 .card_imagem_galeria img {
@@ -380,6 +395,10 @@ h2 span {
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform .6s ease;
+}
+.card_imagem_galeria:hover img {
+    transform: scale(1.03);
 }
 
 @keyframes scroll {
@@ -391,6 +410,65 @@ h2 span {
         transform: translateX(-50%);
     }
 }
+/* =====================
+Depoimentos
+===================== */
+
+.flex_depoimentos{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 30px ;
+    flex-wrap: wrap;
+    /* border: red solid 2px ; */
+
+}
+
+.card_depoimento{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap:16px ;
+
+    box-shadow:  0 10px 35px rgba(0,0,0,.08);
+
+    border-radius: 24px;
+    padding: 26px 30px;
+
+    width: 380px ;
+    min-height: 155px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card_depoimento:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.10);
+}
+.estrelas{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.card_depoimento h3{
+    margin: 6px 0 0 0 ;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f1f1f;
+}
+
+.card_depoimento p {
+    margin: 2px 0 0 0 ;
+    font-style: italic;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+#span_cursivo{
+    font-style: italic;
+    font-weight: 200 ;
+}
+
+
 
 /* =====================
 AGENDAMENTO
