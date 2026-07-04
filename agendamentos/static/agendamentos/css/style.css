@@ -19,20 +19,17 @@ html, body {
 /* =====================
    TIPOGRAFIA GLOBAL
 ===================== */
-h1{
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 500;
-}
 
 h1 {
+   font-family: "Cormorant Garamond", serif;
     font-size: clamp(36px, 5vw, 56px);
-    letter-spacing: 8px;
+    letter-spacing: clamp(2px, 0.8vw, 8px);
     font-weight: 600;
 }
 
 
 h2{
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 4vw, 2.8rem);
     font-family: Manrope;
     margin: 8px 0 ;
     font-weight: 500;
@@ -41,11 +38,16 @@ h2{
 h3 {
     font-family: "Playfair Display", serif;
     font-weight: 600;
-    font-size: 22px;
+     font-size: clamp(18px, 2vw, 22px);
 }
 
 p, a, span {
     font-family: "Manrope", sans-serif;
+}
+p{  
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(15px, 1.3vw, 17px);
+    line-height: 1.6;
 }
 
 /* =====================
@@ -58,7 +60,7 @@ main {
 section {
     scroll-margin-top: 10px;
     min-height: 600px;
-    width: 100dvw;
+    width: 100%;
     padding: 20px 0 ;
 }
 
@@ -574,6 +576,7 @@ AGENDAMENTO
    RESPONSIVO
 ===================== */
 @media (max-width: 920px) {
+
     .nav-links {
         display: none;
     }
