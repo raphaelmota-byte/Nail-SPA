@@ -59,9 +59,9 @@ main {
 
 section {
     scroll-margin-top: 10px;
-    min-height: 600px;
+    min-height: min(600px, 100dvh);
     width: 100%;
-    padding: 20px 0 ;
+    padding: clamp(40px, 6vw, 90px) 0;
 }
 
 /* =====================
