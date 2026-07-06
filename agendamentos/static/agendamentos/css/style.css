@@ -74,13 +74,13 @@ section {
     transform: translateX(-50%);
 
     width: calc(100% - 30px);
-    height: 55px;
+    height: clamp(55px, 6vw, 65px);
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 60px;
+    padding: 0 clamp(18px, 4vw, 60px);
 
     z-index: 1000;
 
@@ -97,7 +97,7 @@ section {
 
 .nav-links {
     display: flex;
-    gap: 28px;
+    gap: clamp(16px, 2vw, 28px);
 }
 
 .nav-links a {
@@ -574,8 +574,7 @@ AGENDAMENTO
 
 /* =====================
    RESPONSIVO
-===================== */
-@media (max-width: 920px) {
+===================== */@media (max-width: 920px) {
 
     .nav-links {
         display: none;
@@ -590,14 +589,34 @@ AGENDAMENTO
         top: 70px;
         right: 20px;
 
+        width: min(220px, 85vw);
+
         background-color: white;
         padding: 20px;
         border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
     .menu_btn {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 26px;
+        line-height: 1;
+
+        background: transparent;
+        border: none;
+        border-radius: 8px;
+
+        cursor: pointer;
+    }
+
+    .menu_btn:hover {
+        background-color: rgba(59, 130, 246, 0.1);
     }
 
     .cards-servicos-grid {
@@ -630,15 +649,6 @@ AGENDAMENTO
     .card-servico img {
         width: 80px;
         height: 80px;
-    }
-
-    h3 {
-        font-size: 15px;
-    }
-
-    p {
-        font-size: 12px;
-        line-height: 1.3;
     }
 
     .btn-servico {
