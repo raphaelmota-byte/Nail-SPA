@@ -28,19 +28,23 @@
     </header>
  
     <main>
-        <section id="inicio" 
+        <section id="inicio" >
+
+            <picture class="hero-img">
+
+             <!-- mobile -->
+            <source media="(max-width: 768px)" srcset="{% static 'agendamentos/img/foto_inicio_mobile.png' %}" alt="foto_mobile">
+
+
              {% if config.foto_inicio and config.ativacao %}
-             style="background-image: url('{{ config.foto_inicio.url }}');"
-               {% comment %} <img src="{{ config.foto_inicio.url }}" alt="Foto inicial"> {% endcomment %}
+             <img src="{{config.foto_inicio.url}}" alt="imagem inicio">
             {% else %}
-             style="background-image: url('{% static "agendamentos/img/imagem_inicio_azul_3.png" %}')"
-                {% comment %} <img src="{% static 'agendamentos/img/foto_inicio.jpeg' %}" alt="Foto inicial"> {% endcomment %}
+              <img src="{% static 'agendamentos/img/imagem_inicio_azul_3.png' %}" alt="Imagem inicial">
 
             {% endif %}
-        >   
-        <div class="texto_inicio">   
-            {% comment %} <h1>Nail Spa</h1> {% endcomment %}
-        </div>
+
+            </picture>
+          
         </section>
 
         <section id="beneficios">
