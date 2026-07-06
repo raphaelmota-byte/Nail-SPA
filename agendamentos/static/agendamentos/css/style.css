@@ -384,16 +384,16 @@ h2 span {
 
 .track{
     display: flex;
-    padding: 12px ;
+    padding: 12px;
     flex-wrap: nowrap;
-
 
     animation: scroll 40s linear infinite;
     width: max-content;
-    will-change: transform;
-    transform: translate3d(0,0,0);
 
-    gap:18px ;
+    will-change: transform;
+    backface-visibility: hidden;
+
+    gap: 18px;
 }
 
 .card_imagem_galeria{
@@ -403,6 +403,7 @@ h2 span {
     margin-right: 0;
     overflow: hidden ;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 .card_imagem_galeria:hover {
     transform: translateY(-6px);
@@ -415,18 +416,19 @@ h2 span {
     object-fit: cover;
     display: block;
     transition: transform .6s ease;
+    transform: translateZ(0);
 }
 .card_imagem_galeria:hover img {
     transform: scale(1.03);
 }
 
 @keyframes scroll {
-    0% {
-        transform: translateX(0);
+    from {
+        transform: translate3d(0, 0, 0);
     }
 
-    100% {
-        transform: translateX(-50%);
+    to {
+        transform: translate3d(-50%, 0, 0);
     }
 }
 /* =====================

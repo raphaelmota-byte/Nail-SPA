@@ -11,7 +11,7 @@ def home(request):
     "agendamentos/img/galeria/ambiente_sofisticado.png": "ambiente sofisticado",
     "agendamentos/img/galeria/bioseguranca.png": "biosegurança",
     "agendamentos/img/galeria/foto_servico_manicure.jfif": "manicure",
-    "agendamentos/img/galeria/foto_unha_azul.jpg": "unha azul",
+    "agendamentos/img/galeria/foto_unha_azul.webp": "unha azul",
     "agendamentos/img/galeria/produtos_premium.jfif": "produtos premium"
         
     }

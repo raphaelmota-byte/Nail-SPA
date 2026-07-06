@@ -150,11 +150,11 @@
                             </div>
                         {% endfor %}
 
-                        {% for url , alt in dic_galeria_alt.items %}
+                        {% comment %} {% for url , alt in dic_galeria_alt.items %}
                             <div class="card_imagem_galeria">
                             <img src= "{% static url %}" alt= {{alt}} >
                             </div>
-                        {% endfor %}
+                        {% endfor %} {% endcomment %}
 
                     </div>
                 </div>
