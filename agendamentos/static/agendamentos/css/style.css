@@ -377,8 +377,10 @@ h2 span {
 .container_carrossel{
     width: 100%;
     padding: 2px ;
-    overflow: hidden;
     margin-top: 4px;
+    
+    overflow: hidden;
+    position: relative;
 }
 
 
@@ -386,14 +388,13 @@ h2 span {
     display: flex;
     padding: 12px;
     flex-wrap: nowrap;
-
-    animation: scroll 40s linear infinite;
+    gap: 18px;
     width: max-content;
 
     will-change: transform;
     backface-visibility: hidden;
 
-    gap: 18px;
+    transform: translateX(0);
 }
 
 .card_imagem_galeria{
@@ -422,15 +423,6 @@ h2 span {
     transform: scale(1.03);
 }
 
-@keyframes scroll {
-    from {
-        transform: translate3d(0, 0, 0);
-    }
-
-    to {
-        transform: translate3d(-50%, 0, 0);
-    }
-}
 /* =====================
 Depoimentos
 ===================== */

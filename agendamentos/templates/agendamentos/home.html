@@ -253,6 +253,42 @@
     });
 
     lucide.createIcons();
+
+    const track = document.querySelector(".track");
+
+const imagens = track.querySelectorAll("img");
+
+Promise.all(
+    [...imagens].map(img => {
+        if (img.complete) return Promise.resolve();
+
+        return new Promise(resolve => {
+            img.onload = resolve;
+            img.onerror = resolve;
+        });
+    })
+).then(() => {
+
+    const metade = track.scrollWidth / 2;
+
+    let posicao = 0;
+    const velocidade = 0.8; // pixels por frame
+
+    function animar() {
+
+        posicao -= velocidade;
+
+        if (Math.abs(posicao) >= metade) {
+            posicao = 0;
+        }
+
+        track.style.transform = `translateX(${posicao}px)`;
+
+        requestAnimationFrame(animar);
+    }
+
+    animar();
+});
 </script>
 </body>
 </html>
