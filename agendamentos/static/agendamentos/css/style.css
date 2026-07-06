@@ -501,7 +501,7 @@ AGENDAMENTO
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px ;
+    gap: 32px ;
     /* border: black solid 2px ; */
 }
 
@@ -533,6 +533,7 @@ AGENDAMENTO
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .material-symbols-outlined {
@@ -677,5 +678,8 @@ AGENDAMENTO
     .btn-servico {
         padding: 8px 10px;
         font-size: 11px;
+    }
+    #agendamento {
+        background-image: url("../img/foto_fundo_agendamento_mobile.png");
     }
 }
