@@ -10,6 +10,7 @@ html, body {
     scroll-behavior: smooth;
     font-family: "Lato", sans-serif;
     color: #1f2937;
+    background-color: #e8f2ff;
 }
 
 * {
@@ -54,14 +55,15 @@ p{
    LAYOUT GERAL
 ===================== */
 main {
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 section {
     scroll-margin-top: 10px;
     width: 100%;
-    padding: clamp(40px, 6vw, 90px) 0;
+    padding: clamp(25px, 3vw, 60px) 0;
     min-height: 80vh;
+    margin : 4px ;
 }
 
 /* =====================
@@ -252,8 +254,9 @@ SERVIÇOS
 ===================== */
 .container_geral {
     width: min(90%, 1200px);
+    margin-top: 0;
     margin: 0 auto;
-    padding: 32px 24px; 
+    padding: 16px 24px; 
     /* border: solid 2px green ; */
 
 }
@@ -263,7 +266,9 @@ SERVIÇOS
     grid-template-columns: repeat(3, 300px);
     gap: 32px;
     justify-content: center;
-    margin-top: 16px;
+    margin-top: 28px;
+    padding: 16px ;
+    /* border: blue solid 2px ; */
 }
 
 .card-servico {
@@ -543,13 +548,14 @@ AGENDAMENTO
     margin-top: -60px;
     padding: 0 ;
     position: relative;
+    /* border: yellow solid 2px ; */
 
 }
 .hero-img img {
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  object-position: top;
+  object-position: center 60%;
   display: block;
 }
 
@@ -566,6 +572,7 @@ AGENDAMENTO
         #f3f8ff,
         #e8f2ff
     );
+    /* border: blueviolet solid 2px ; */
 }
 
 #servicos {
