@@ -389,7 +389,9 @@ h2 span {
 
 
     animation: scroll 40s linear infinite;
-    width: max-content;
+    /* width: max-content; */
+    will-change: transform;
+    transform: translate3d(0,0,0);
 }
 
 .card_imagem_galeria{
