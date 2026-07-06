@@ -135,7 +135,8 @@ BENEFICIOS
     display: flex ;
     flex-direction: column;
     align-items: center;
-    margin: 4px;
+    text-align: center;
+    margin: 4px 0;
     /* border: red solid 2px ; */
   
 }
@@ -151,9 +152,12 @@ BENEFICIOS
 
 .grid_beneficios{
     display: grid ;
-    grid-template-columns: repeat(4 , 1fr); /*4 colunas */
+    grid-template-columns: repeat(auto-fit , 240px ); 
+    justify-content: center;
+    padding: 16px ;
     gap:32px ;
     margin: 8px 0 0 0;
+    /* border: red solid 2px ; */
 }
 
 .card_beneficios{
@@ -253,11 +257,10 @@ BENEFICIOS
 SERVIÇOS
 ===================== */
 .container_geral {
-    width: min(90%, 1200px);
+    width: min(95%, 1200px);
     margin-top: 0;
     margin: 0 auto;
-    padding: 16px 24px; 
-    /* border: solid 2px green ; */
+    padding: 8px 24px; 
 
 }
 
@@ -267,7 +270,7 @@ SERVIÇOS
     gap: 32px;
     justify-content: center;
     margin-top: 28px;
-    padding: 16px ;
+    padding: 8px ;
     /* border: blue solid 2px ; */
 }
 
@@ -285,11 +288,12 @@ SERVIÇOS
     
     padding: 16px 0;
     position: relative;
+    /* border: red solid 2px ; */
 }
 
 .card-servico img {
     width: 180px;
-    height: 180px;
+    height: 200px;
     margin-bottom: 28px;
     
     border-radius: 15px;
@@ -351,6 +355,7 @@ GALERIA
     display: flex ;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   
 }
 .container_flex_titulos_galeria h3{
@@ -660,8 +665,13 @@ AGENDAMENTO
     }
 
     .card-servico img {
-        width: 90px;
-        height: 90px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .card-servico::before{
+        width: 20px;
+
     }
 
     .btn-servico {
