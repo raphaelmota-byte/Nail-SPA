@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Playfair+Display:wght@500;600&family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
 
 /* =====================
    BASE
 ===================== */
-html, body {
+
+html,
+body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    font-family: "Lato", sans-serif;
+
+    font-family: "Manrope", sans-serif;
     color: #1f2937;
     background-color: #e8f2ff;
 }
@@ -22,35 +25,59 @@ html, body {
 ===================== */
 
 h1 {
-   font-family: "Cormorant Garamond", serif;
+    font-family: "Lora", serif;
     font-size: clamp(36px, 5vw, 56px);
-    letter-spacing: clamp(2px, 0.8vw, 8px);
     font-weight: 600;
+    letter-spacing: clamp(1px, 0.3vw, 3px);
+    line-height: 1.1;
 }
 
-
-h2{
+h2 {
+    font-family: "Lora", serif;
     font-size: clamp(2rem, 4vw, 2.8rem);
-    font-family: Manrope;
-    margin: 8px 0 ;
     font-weight: 500;
+    margin: 8px 0;
+    line-height: 1.1;
+    font-style: italic;
 }
 
 h3 {
-    font-family: "Playfair Display", serif;
+    font-family: "Lora", serif;
+    font-size: clamp(18px, 2vw, 22px);
     font-weight: 600;
-     font-size: clamp(18px, 2vw, 22px);
+    line-height: 1.3;
 }
 
-p, a, span {
+p,
+a,
+span {
     font-family: "Manrope", sans-serif;
 }
-p{  
-    font-family: "Manrope", sans-serif;
+
+p {
     font-size: clamp(15px, 1.3vw, 17px);
-    line-height: 1.6;
+    line-height: 1.7;
+    color: #4b5563;
 }
 
+/* Texto acima dos títulos */
+
+.section-label {
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(0.8rem, 1vw, 0.95rem);
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #5E81AC;
+    margin: 0 0 8px;
+}
+
+.titulo-destaque{
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 600;
+    color: #3D5A80;
+}
 /* =====================
    LAYOUT GERAL
 ===================== */
@@ -65,6 +92,7 @@ section {
     min-height: 80vh;
     margin : 4px ;
 }
+
 
 /* =====================
    NAVBAR
@@ -358,6 +386,12 @@ GALERIA
     text-align: center;
   
 }
+
+.container_flex_titulos_galeria .section-label{
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    letter-spacing: 0.18em;
+}
+
 .container_flex_titulos_galeria h3{
     font-family: Manrope;
     letter-spacing: 1.8px;
@@ -378,7 +412,7 @@ h2 span {
     width: 100%;
     padding: 2px ;
     margin-top: 4px;
-    
+
     overflow: hidden;
     position: relative;
 }
@@ -499,8 +533,19 @@ AGENDAMENTO
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px ;
+    text-align: center;
+    gap: 30px ;
     /* border: black solid 2px ; */
+}
+.agendamento_textos {
+    /* border: brown solid 2px ; */
+
+    text-align: center;
+    background: rgba(255,255,255,.45);
+    backdrop-filter: blur(8px);
+    padding: 18px 24px;
+    border-radius: 18px;
+    max-width: 500px;
 }
 
 .btn_zap {
@@ -511,7 +556,6 @@ AGENDAMENTO
     background-color: green;
     border-radius: 50px;
     padding: 20px 18px;
-    margin: 42px;
     color: white;
     text-decoration: none; 
 }
@@ -522,9 +566,15 @@ AGENDAMENTO
 }
 
 .vantagens {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 18px;
+
+    /* gap: 50px; */
+    padding: 2px ;
+    margin-bottom: 2px;
+
+    /* border: red solid 2px ; */
 }
 
 .vantagem {
@@ -532,16 +582,27 @@ AGENDAMENTO
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(94, 129, 172, 0.04);
+
+    border-radius: 18px;
+    padding: 14px 16px;
+
+    /* border: lightskyblue solid 2px ; */
 }
 
 .material-symbols-outlined {
-    font-size: 32px;
+    font-size: 2.5rem;
+    margin-top: 8px;
     color: #e8a4c4;
+    /* border: green solid 2px ; */
 }
 
-#agendamento h1
+#agendamento h2
 {
-    margin-bottom: 0;
+    font-size: clamp(3.2rem, 4vw, 4.4rem);
 }
 
 /* =====================
@@ -677,6 +738,12 @@ AGENDAMENTO
         padding: 8px 10px;
         font-size: 11px;
     }
+
+    .botao_whatsapp {
+    width: 90%;
+    max-width: 320px;
+}
+
     #agendamento {
         background-image: url("../img/foto_fundo_agendamento_mobile.png");
     }

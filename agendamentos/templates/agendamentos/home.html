@@ -51,8 +51,8 @@
             <div class="container_geral">
 
                 <div class= "container_flex_titulos" >
-                    <p>O padrão NAIL SPA</p> 
-                    <h2>Cuidado que faz a diferença</h2>
+                    <p class="section-label">O padrão NAIL SPA</p> 
+                    <h2>Cuidado que faz a <span class="titulo-destaque" >diferença</span></h2>
                 </div>
 
                 <div class="grid_beneficios">
@@ -105,8 +105,8 @@
         <section id="servicos">
             <div class="container_geral" > 
                 <div class="container_flex_titulos">
-                    <h3>Serviços</h3>
-                    <h2>Feitos com amor e dedicação.</h2>
+                    <p class="section-label">Serviços</p>
+                    <h2>Elegância em detalhes</h2>
                 </div>
 
                 <div class="cards-servicos-grid">
@@ -136,7 +136,7 @@
         <section id="galeria">
             <div class="container_geral_galeria">
                 <div class="container_flex_titulos_galeria">
-                    <h3>Galeria</h3>
+                    <p class="section-label">Galeria</p> 
                     <h2><span>Conheça</span> nossas artes</h2>
                     <p>Cada detalhe pensado para realçar sua beleza</p>
                 </div>
@@ -167,7 +167,7 @@
         <div class="container_geral_galeria" > 
 
             <div class="container_flex_titulos_galeria">
-                <h3>Depoimentos</h3>
+                <p class="section-label">Depoimentos</p>
                 <h2>Veja o que nossas <span id="span_cursivo">clientes</span> acham</h2>
             </div>
             
@@ -198,9 +198,11 @@
         
         <div class="container_agendamento" > 
             <div class="flex_agendamento" >
-                <h1>Agende seu horário</h1>
-                <p>Atendimento rápido e personalizado pelo Whatsapp</p>
-                <p>💬 ⏱️ Respondemos em poucos minutos</p>
+                <h2>Agende seu horário</h2>
+                <div class="agendamento_textos">
+                    <p>Atendimento rápido e personalizado pelo Whatsapp</p>
+                    <p>💬 ⏱️ Respondemos em poucos minutos</p>
+                </div>
 
                 <a class="btn_zap" href="https://wa.me/5521978935622?text=Ola, gostaria de marcar um agendamento">
                     <i class="fa-brands fa-whatsapp"></i>
@@ -272,7 +274,7 @@ Promise.all(
     const metade = track.scrollWidth / 2;
 
     let posicao = 0;
-    const velocidade = 0.8; // pixels por frame
+    const velocidade = 0.9; // pixels por frame
 
     function animar() {
 
