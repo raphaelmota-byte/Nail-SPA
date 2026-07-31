@@ -1,4 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Lora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+    --cor_fundo: #e8f2ff ;
+    --cor_azul_card: #16427a ;
+
+    --borda_card: 1px solid rgba(22, 66, 122, 0.12);
+
+    --raio_pequeno: 8px;
+    --raio_medio: 12px;
+    --raio_grande: 18px;
+
+    /* Espaçamentos */
+
+    --espaco_medio: 16px;
+    --espaco_grande: 24px;
+    --espaco_extra_grande: 32px;
+
+}
+
+
+
 
 /* =====================
    BASE
@@ -13,8 +34,9 @@ body {
 
     font-family: "Manrope", sans-serif;
     color: #1f2937;
-    background-color: #e8f2ff;
+    background-color: var(--cor_fundo)
 }
+
 
 * {
     box-sizing: border-box;
@@ -62,7 +84,7 @@ p {
 
 /* Texto acima dos títulos */
 
-.section-label {
+.section_label {
     font-family: "Manrope", sans-serif;
     font-size: clamp(0.8rem, 1vw, 0.95rem);
     font-weight: 700;
@@ -73,7 +95,7 @@ p {
 }
 
 .titulo-destaque{
-    font-family: "Cormorant Garamond", serif;
+    font-family: serif;
     font-style: italic;
     font-weight: 600;
     color: #3D5A80;
@@ -86,11 +108,10 @@ main {
 }
 
 section {
-    scroll-margin-top: 10px;
+    scroll-margin-top: 40px;
     width: 100%;
     padding: clamp(25px, 3vw, 60px) 0;
-    min-height: 80vh;
-    margin : 4px ;
+    min-height: 65vh;
 }
 
 
@@ -127,7 +148,7 @@ section {
 
 .nav-links {
     display: flex;
-    gap: clamp(16px, 2vw, 28px);
+    gap: clamp(var(--espaco_medio) , 2vw, 28px);
 }
 
 .nav-links a {
@@ -137,7 +158,7 @@ section {
     font-weight: 500;
 
     padding: 6px 8px;
-    border-radius: 8px;
+    border-radius: var(--raio_pequeno);
 
     transition: 0.3s;
 }
@@ -154,6 +175,19 @@ section {
     display: none;
 }
 
+/* =====================
+   CONTAINER GERAL
+===================== */
+
+.container {    
+    width: min(100% - 32px, 1200px);
+    margin-inline: auto;
+}
+.container_largo {
+    width: min(100% - 32px, 1500px);
+    margin-inline: auto;
+}
+
 
 /* =====================
 BENEFICIOS
@@ -165,7 +199,6 @@ BENEFICIOS
     align-items: center;
     text-align: center;
     margin: 4px 0;
-    /* border: red solid 2px ; */
   
 }
 .container_flex_titulos p{
@@ -185,7 +218,6 @@ BENEFICIOS
     padding: 16px ;
     gap:32px ;
     margin: 8px 0 0 0;
-    /* border: red solid 2px ; */
 }
 
 .card_beneficios{
@@ -198,7 +230,7 @@ BENEFICIOS
 
     width: 240px;
     height: 340px;
-    border-radius: 12px;
+    border-radius: var(--raio_medio);
     border: 1px solid #5F7D95;
 
     
@@ -284,30 +316,23 @@ BENEFICIOS
 /* =====================
 SERVIÇOS
 ===================== */
-.container_geral {
-    width: min(95%, 1200px);
-    margin-top: 0;
-    margin: 0 auto;
-    padding: 8px 24px; 
 
-}
 
-.cards-servicos-grid {
+.cards_servicos_grid {
     display: grid;
-    grid-template-columns: repeat(3, 300px);
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 300px)) ;
+    gap: var(--espaco_extra_grande);
     justify-content: center;
     margin-top: 28px;
     padding: 8px ;
-    /* border: blue solid 2px ; */
 }
 
-.card-servico {
+.card_servico {
     background-color: #dbe8f6;
-    border: 1px solid rgba(22, 66, 122, 0.12);
+    border: var(--borda_card);
     box-shadow: 0 8px 25px rgba(15, 47, 95, 0.08);
     
-    border-radius: 12px;
+    border-radius: var(--raio_medio);
     
     display: flex;
     flex-direction: column;
@@ -315,29 +340,29 @@ SERVIÇOS
     text-align: center;
     
     padding: 16px 0;
+    gap: 12px;
     position: relative;
-    /* border: red solid 2px ; */
 }
 
-.card-servico img {
+.card_servico img {
     width: 180px;
-    height: 200px;
-    margin-bottom: 28px;
+    height: 180px;
+    margin-bottom: 8px;
     
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     object-fit: cover;
 }
 
-.card-servico::before {
+.card_servico::before {
     content: "";
     position: absolute;
-    top: 40px;
+    top: 24px;
     right: 0;
     
     width: 28px;
     height: 12px;
-    background-color: #16427a;
+    background-color: var(--cor_azul_card);
 }
 
 .btn-servico {
@@ -345,13 +370,13 @@ SERVIÇOS
     display: inline-block;
     
     padding: 14px 32px;
-    background-color: #16427a;
+    background-color: var(--cor_azul_card);
     color: white;
     
     text-decoration: none;
     font-weight: 600;
     
-    border-radius: 8px;
+    border-radius: var(--raio_pequeno);
     transition: 0.3s;
 }
 
@@ -370,14 +395,7 @@ SERVIÇOS
 GALERIA
 ===================== */
 
-.container_geral_galeria {
-    width: 100vw;
-    margin: 0 auto;
-    padding: 32px 24px; 
-    /* border: solid 2px black ; */
 
-
-}
 
 .container_flex_titulos_galeria {
     display: flex ;
@@ -411,7 +429,7 @@ h2 span {
 .container_carrossel{
     width: 100%;
     padding: 2px ;
-    margin-top: 4px;
+    margin-top: 28px;
 
     overflow: hidden;
     position: relative;
@@ -422,7 +440,7 @@ h2 span {
     display: flex;
     padding: 12px;
     flex-wrap: nowrap;
-    gap: 18px;
+    gap: var(--espaco_medio);
     width: max-content;
 
     will-change: transform;
@@ -433,9 +451,9 @@ h2 span {
 
 .card_imagem_galeria{
     border-radius: 24px;
-    flex: 0 0 240px;
-    height: 320px;
-    margin-right: 0;
+    flex: 0 0 280px;
+    height: 380px;
+
     overflow: hidden ;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -465,24 +483,26 @@ Depoimentos
     margin-top: 60px;
     display: flex;
     justify-content: center;
-    gap: 30px ;
+    gap: var(--espaco_extra_grande) ;
     flex-wrap: wrap;
-    /* border: red solid 2px ; */
+    padding: 8px;
 
 }
 
 .card_depoimento{
+    
     background: white;
     display: flex;
     flex-direction: column;
-    gap:16px ;
-
+    gap:var(--espaco_medio) ;
+    
     box-shadow:  0 10px 35px rgba(0,0,0,.08);
-
+    
     border-radius: 24px;
     padding: 26px 30px;
-
-    width: 380px ;
+    
+    flex: 1 1 300px;
+    max-width: 380px;
     min-height: 155px;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -534,7 +554,7 @@ AGENDAMENTO
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 30px ;
+    gap: var(--espaco_extra_grande) ;
     /* border: black solid 2px ; */
 }
 .agendamento_textos {
@@ -544,7 +564,7 @@ AGENDAMENTO
     background: rgba(255,255,255,.45);
     backdrop-filter: blur(8px);
     padding: 18px 24px;
-    border-radius: 18px;
+    border-radius: var(--raio_grande);
     max-width: 500px;
 }
 
@@ -568,9 +588,8 @@ AGENDAMENTO
 .vantagens {
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
-    gap: 18px;
+    gap: var(--espaco_medio);
 
-    /* gap: 50px; */
     padding: 2px ;
     margin-bottom: 2px;
 
@@ -587,7 +606,7 @@ AGENDAMENTO
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 24px rgba(94, 129, 172, 0.04);
 
-    border-radius: 18px;
+    border-radius: var(--raio_grande);
     padding: 14px 16px;
 
     /* border: lightskyblue solid 2px ; */
@@ -635,13 +654,12 @@ AGENDAMENTO
     background: linear-gradient(
         to bottom,
         #f3f8ff,
-        #e8f2ff
+        var(--cor_fundo)
     );
-    /* border: blueviolet solid 2px ; */
 }
 
 #servicos {
-    background-color: #e8f2ff;
+    background-color: var(--cor_fundo);
 }
 
 #galeria {
@@ -672,7 +690,7 @@ AGENDAMENTO
     .nav-links.ativo {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: var(--espaco_medio);
 
         position: absolute;
         top: 70px;
@@ -682,7 +700,7 @@ AGENDAMENTO
 
         background-color: white;
         padding: 20px;
-        border-radius: 12px;
+        border-radius: var(--raio_medio);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
@@ -699,7 +717,7 @@ AGENDAMENTO
 
         background: transparent;
         border: none;
-        border-radius: 8px;
+        border-radius: var(--raio_pequeno);
 
         cursor: pointer;
     }
@@ -708,28 +726,22 @@ AGENDAMENTO
         background-color: rgba(59, 130, 246, 0.1);
     }
 
-    .cards-servicos-grid {
-        grid-template-columns: repeat(2, 300px);
-    }
+    
 }
 
 @media (max-width: 700px) {
 
-    .cards-servicos-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+  
+
+    .card_servico {
+        padding: 16px 8px;
     }
 
-    .card-servico {
-        padding: 18px 10px;
+    .card_servico img {
+        width: 75%;
     }
 
-    .card-servico img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .card-servico::before{
+    .card_servico::before{
         width: 20px;
 
     }

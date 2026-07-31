@@ -48,7 +48,7 @@
         </section>
 
         <section id="beneficios">
-            <div class="container_geral">
+            <div class="container">
 
                 <div class= "container_flex_titulos" >
                     <p class="section-label">O padrão NAIL SPA</p> 
@@ -103,15 +103,17 @@
 
         
         <section id="servicos">
-            <div class="container_geral" > 
+
+            <div class="container" > 
+
                 <div class="container_flex_titulos">
-                    <p class="section-label">Serviços</p>
+                    <p class="section_label">Serviços</p>
                     <h2>Elegância em detalhes</h2>
                 </div>
 
-                <div class="cards-servicos-grid">
+                <div class="cards_servicos_grid">
              {% for servico in servicos %}
-                 <div class="card-servico">
+                 <div class="card_servico">
 
                      {% if servico.foto %}
                          <img 
@@ -134,7 +136,8 @@
         </section>
 
         <section id="galeria">
-            <div class="container_geral_galeria">
+
+            <div class="container  ">
                 <div class="container_flex_titulos_galeria">
                     <p class="section-label">Galeria</p> 
                     <h2><span>Conheça</span> nossas artes</h2>
@@ -164,7 +167,7 @@
 
     
     <section id='depoimentos'>
-        <div class="container_geral_galeria" > 
+        <div class="container container_largo" > 
 
             <div class="container_flex_titulos_galeria">
                 <p class="section-label">Depoimentos</p>
