@@ -405,7 +405,7 @@ GALERIA
   
 }
 
-.container_flex_titulos_galeria .section-label{
+.container_flex_titulos_galeria .section_label{
     font-size: clamp(1rem, 1.5vw, 1.2rem);
     letter-spacing: 0.18em;
 }
